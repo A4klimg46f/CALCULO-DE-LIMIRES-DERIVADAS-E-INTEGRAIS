@@ -19,6 +19,34 @@ O script apresentado realiza os seguintes cálculos matemáticos utilizando o Sy
 4. Cálculo de Integral:
    - Calcula a integral indefinida da expressão x**2 + x + 1 em relação a x. O resultado é apresentado como uma expressão simbólica.
 
-## Estrutura do Código
+Estrutura do Código
 O código segue a seguinte estrutura:
+
+import sympy as sp
+
+Definição de variáveis simbólicas
+x, y = sp.symbols('x y')
+
+Cálculo do limite
+lim = sp.limit((x**2 - 1)/(x - 1), x, 1)
+print(lim)
+
+Cálculo da derivada
+f = x**3 + 2*x**2 + 3*x + 4
+derivada = sp.diff(f, x)
+print(derivada)
+
+Cálculo da integral
+integral = sp.integrate(x**2 + x + 1, x)
+print(integral)
+
+
+## Saída Esperada
+1. Ao executar o código, o terminal exibirá os seguintes resultados:
+   - Resultado do limite: 2
+   - Resultado da derivada: 3*x**2 + 4*x + 3
+   - Resultado da integral: x**3/3 + x**2/2 + x + C (onde C é a constante de integração).
+## Observações
+   - O SymPy retorna os resultados em formato simbólico. Caso deseje obter valores numéricos, você pode substituir valores específicos nas variáveis usando o método .subs() ou converter expressões para valores numéricos com .evalf().
+   - Este exemplo foi elaborado para fins educacionais e pode ser expandido para incluir cálculos mais avançados ou aplicações específicas.
 
